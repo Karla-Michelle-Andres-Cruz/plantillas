@@ -12,7 +12,7 @@ def index():
 def p1():
     musica = ["cosa de dos", "flaco", "aunque te mueras por volver"]
     autores = ["Jose Jose", "Mon Laferte", "Bunburry"]
-    return render_template("p1.html", musica = canciones, autores = auto )
+    return render_template("p1.html", canciones = musica, auto = autores  )
 
 
 
