@@ -8,12 +8,6 @@ def index():
     autor = "Karla Michelle Andre Cruz"
     return render_template("index.html", nombre = autor, amigos = arr)
 
-@app.route('/plantilla1')
-def p1():
-    musica = ["cosa de dos", "flaco", "aunque te mueras por volver"]
-    autores = ["Jose Jose", "Mon Laferte", "Bunburry"]
-    return render_template("p1.html", canciones = musica, auto = autores  )
-
 
 
 
