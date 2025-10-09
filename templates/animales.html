@@ -1,19 +1,15 @@
 {% extends "index.html" %} {% block content %}
 
-<div class="container text-center mt-5">
   <div class="row">
-    <h1
-      class="text-center"
-      style="font-family: 'Pacifico', system-ui; font-size: px"
-    >
+    <h1 class="text-center" style="font-family: 'Pacifico', system-ui; font-size: px">
       Animales Exóticos Acuaticos
     </h1>
-    <div class="col-6">
-      <div class="card shadow" style="width: 16rem">
-        <img src="{{ url_for('static', filename='img/axo.jpg') }}" alt="axolote"/>
+    <div class="col-12 col-md-6 col-lg-5 mx-auto">
+      <div class="card shadow w-100" style="width: 25rem">
+        <img src="{{ url_for('static', filename='img/axo.webp') }}" alt="Axolote" />
         <div class="card-body">
-          <h5 class="card-title">Axolote</h5>
-          <p class="card-text">
+          <h5 class="card-title" style="font-family: 'Pacifico', system-ui; font-size: 25px">Axolote</h5>
+          <p class="card-text" style="font-family: 'Indie Flower', system-ui; font-size: 18px;">
             El lago de Xochimilco, en la ciudad de México, es patrimonio
             cultural de la humanidad y un lugar especial por muchos motivos.
             Pero, quizás, el más famoso sea porque es el único hábitat donde
@@ -33,12 +29,12 @@
       </div>
     </div>
 
-    <div class="col-6">
-      <div class="card shadow" style="width: 18rem">
-        <img src="{{ image_url }}" alt="Descripción de la imagen" />
+    <div class="col-12 col-md-6 col-lg-5 mx-auto">
+      <div class="card shadow w-100" style="width: 18rem">
+        <img src="{{ url_for('static', filename='img/dragon.jpg') }}" alt="Dragón de agua chino" />
         <div class="card-body">
-          <h5 class="card-title">Dragón de agua chino</h5>
-          <p class="card-text">
+          <h5 class="card-title" style="font-family: 'Pacifico', system-ui; font-size: 25px">Dragón de agua chino</h5>
+          <p class="card-text" style="font-family: 'Indie Flower', system-ui; font-size: 18px;">
             viven en los bosques y selvas de Camboya, Tailandia, Laos, Birmania
             y Vietnam. Tienen un tercer ojo en la parte superior del cráneo, que
             les permite regular la temperatura y los cambios de luz, para
@@ -56,18 +52,16 @@
   </div>
 
   <div class="row">
-    <h1
-      class="text-center"
-      style="font-family: 'Pacifico', system-ui; font-size: px"
-    >
+    <h1 class="text-center" style="font-family: 'Pacifico', system-ui; font-size: px">
       Animales Exóticos Terrestres
     </h1>
-    <div class="col-6">
-      <div class="card shadow" style="width: 18rem">
-        <img src="{{ image_url }}" alt="Descripción de la imagen" />
+    <div class="col-12 col-md-6 col-lg-5 mx-auto">
+      <div class="card shadow w-100" style="width: 18rem">
+        <img src="{{ url_for('static', filename='img/loris.webp') }}" alt="Loris Perezoso" />
         <div class="card-body">
-          <h5 class="card-title">loris perezoso (Nycticebus)</h5>
-          <p class="card-text">
+          <h5 class="card-title" style="font-family: 'Pacifico', system-ui; font-size: 25px">loris perezoso (Nycticebus)
+          </h5>
+          <p class="card-text" style="font-family: 'Indie Flower', system-ui; font-size: 18px;">
             es un tipo de primate que habita en Asia y está considerado como uno
             de los animales más exóticos y lentos del mundo. Su historia
             evolutiva es misteriosa ya que apenas se han encontrado restos
@@ -88,12 +82,12 @@
       </div>
     </div>
 
-    <div class="col-6">
-      <div class="card shadow" style="width: 18rem">
-        <img src="{{ image_url }}" alt="Descripción de la imagen" />
+    <div class="col-12 col-md-6 col-lg-5 mx-auto">
+      <div class="card shadow w-100" style="width: 18rem">
+        <img src="{{ url_for('static', filename='img/aye.jpg') }}" alt="Aye-aye" />
         <div class="card-body">
-          <h5 class="card-title">Aye-aye</h5>
-          <p class="card-text">
+          <h5 class="card-title" style="font-family: 'Pacifico', system-ui; font-size: 25px">Aye-aye</h5>
+          <p class="card-text" style="font-family: 'Indie Flower', system-ui; font-size: 18px;">
             Los aye-ayes solo se encuentran en la isla de Madagascar. Estos
             raros animales pueden no parecer primates a simple vista, pero están
             emparentados con los chimpancés, los simios y los humanos. Los
@@ -113,18 +107,15 @@
   </div>
 
   <div class="row">
-    <h1
-      class="text-center"
-      style="font-family: 'Pacifico', system-ui; font-size: px"
-    >
+    <h1 class="text-center" style="font-family: 'Pacifico', system-ui; font-size: px">
       Animales Exóticos Aéreos
     </h1>
-    <div class="col-6">
-      <div class="card shadow" style="width: 18rem">
-        <img src="{{ image_url }}" alt="Descripción de la imagen" />
+    <div class="col-12 col-md-6 col-lg-5 mx-auto">
+      <div class="card shadow w-100" style="width: 18rem">
+        <img src="{{ url_for('static', filename='img/quetzal.jpg') }}" alt="Quetzal" />
         <div class="card-body">
-          <h5 class="card-title">Quetzal</h5>
-          <p class="card-text">
+          <h5 class="card-title" style="font-family: 'Pacifico', system-ui; font-size: 25px">Quetzal</h5>
+          <p class="card-text" style="font-family: 'Indie Flower', system-ui; font-size: 18px;">
             Esta ave monógama habita los bosques tropicales y subtropicales y se
             alimenta de aguacatillos, insectos y moluscos, lagartijas y ranas,
             entre otros, mientras sus depredadores naturales son la tucaneta
@@ -149,12 +140,13 @@
       </div>
     </div>
 
-    <div class="col-6">
-      <div class="card shadow" style="width: 18rem">
-        <img src="{{ image_url }}" alt="Descripción de la imagen" />
+    <div class="col-12 col-md-6 col-lg-5 mx-auto">
+      <div class="card shadow w-100" style="width: 18rem">
+        <img src="{{ url_for('static', filename='img/pato.jpg') }}" alt="Pato mandarín" />
         <div class="card-body">
-          <h5 class="card-title">Pato mandarín (Aix galericulata)</h5>
-          <p class="card-text">
+          <h5 class="card-title" style="font-family: 'Pacifico', system-ui; font-size: 25px">Pato mandarín (Aix
+            galericulata)</h5>
+          <p class="card-text" style="font-family: 'Indie Flower', system-ui; font-size: 18px;">
             el pato mandarín. Procede de China, Japón y Rusia hasta que fue
             introducido en Europa. El pato mandarín es una raza apreciada por su
             enorme belleza. El macho posee una variedad de colores increíbles
@@ -169,5 +161,5 @@
       </div>
     </div>
   </div>
-</div>
+  </div>
 {% endblock %}
