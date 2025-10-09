@@ -1,8 +1,41 @@
-{% extends "index.html"%}
+{% extends "index.html" %}
 
-{%block content %}
-<div class="container">
-    <h1 style="font-family: 'Lobster', system-ui;">Animales Exoticos</h1>
+{% block content %}
 
+<div class="container text-center mt-5">
+  <div class="row">
+    <div class="col">
+      <div class="card shadow" style="width: 18rem;">
+        <img src="https://via.placeholder.com/286x180" class="card-img-top" alt="Tigre Blanco">
+        <div class="card-body">
+          <h5 class="card-title">Tigre Blanco</h5>
+          <p class="card-text">Un felino majestuoso originario de la India.</p>
+        </div>
+      </div>
+    </div>
+
+```
+<div class="col">
+  <div class="card shadow" style="width: 18rem;">
+    <img src="https://via.placeholder.com/286x180" class="card-img-top" alt="Pez Mandarín">
+    <div class="card-body">
+      <h5 class="card-title">Pez Mandarín</h5>
+      <p class="card-text">Uno de los peces más coloridos del océano.</p>
+    </div>
+  </div>
 </div>
-{%endblock%}
+
+<div class="col">
+  <div class="card shadow" style="width: 18rem;">
+    <img src="https://via.placeholder.com/286x180" class="card-img-top" alt="Camaleón Pantera">
+    <div class="card-body">
+      <h5 class="card-title">Camaleón Pantera</h5>
+      <p class="card-text">Reptil famoso por cambiar de color y camuflarse.</p>
+    </div>
+  </div>
+</div>
+```
+
+  </div>
+</div>
+{% endblock %}
