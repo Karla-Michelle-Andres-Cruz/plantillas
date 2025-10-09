@@ -1,41 +1,176 @@
-{% extends "index.html" %}
-
-{% block content %}
+{% extends "index.html" %} {% block content %}
 
 <div class="container text-center mt-5">
   <div class="row">
-    <div class="col">
-      <div class="card shadow" style="width: 18rem;">
-        <img src="https://via.placeholder.com/286x180" class="card-img-top" alt="Tigre Blanco">
+    <h1
+      class="text-center"
+      style="font-family: 'Pacifico', system-ui; font-size: px"
+    >
+      Animales Exóticos Acuaticos
+    </h1>
+    <div class="col-6">
+      <div class="card shadow" style="width: 16rem">
+        <img
+          src="{{ url_for('static', filename='axo.jpg') }}"
+          alt="Descripción de mi imagen"
+        />
         <div class="card-body">
-          <h5 class="card-title">Tigre Blanco</h5>
-          <p class="card-text">Un felino majestuoso originario de la India.</p>
+          <h5 class="card-title">Axolote</h5>
+          <p class="card-text">
+            El lago de Xochimilco, en la ciudad de México, es patrimonio
+            cultural de la humanidad y un lugar especial por muchos motivos.
+            Pero, quizás, el más famoso sea porque es el único hábitat donde
+            viven los axolotes. Son unas salamandras de color rosa pálido,
+            amarillento u oscuro con branquias con forma de plumas alrededor de
+            la cabeza y que son peculiares, porque conservan toda la vida los
+            rasgos larvales y además pueden vivir toda la vida bajo el agua.
+            Pero, por desgracia, se encuentran en grave peligro de extinción. La
+            introducción de especies invasoras y la contaminación urbana son los
+            dos agentes que causaron el deterioro del ecosistema hasta llegar a
+            existir menos de 100 especímenes. Pero la sociedad mexicana e
+            internacional se puso manos a la obra para impedirlo, como un
+            colectivo de monjas, que los cría en cautividad para aumentar la
+            población de este anfibio.
+          </p>
         </div>
       </div>
     </div>
 
-```
-<div class="col">
-  <div class="card shadow" style="width: 18rem;">
-    <img src="https://via.placeholder.com/286x180" class="card-img-top" alt="Pez Mandarín">
-    <div class="card-body">
-      <h5 class="card-title">Pez Mandarín</h5>
-      <p class="card-text">Uno de los peces más coloridos del océano.</p>
+    <div class="col-6">
+      <div class="card shadow" style="width: 18rem">
+        <img src="{{ image_url }}" alt="Descripción de la imagen" />
+        <div class="card-body">
+          <h5 class="card-title">Dragón de agua chino</h5>
+          <p class="card-text">
+            viven en los bosques y selvas de Camboya, Tailandia, Laos, Birmania
+            y Vietnam. Tienen un tercer ojo en la parte superior del cráneo, que
+            les permite regular la temperatura y los cambios de luz, para
+            encontrar zonas soleadas o incluso detectar si lo van a atacar
+            depredadores por las sombras. Su color habitual es un verde
+            brillante, aunque cambian de color para camuflarse de depredadores a
+            un marrón oscuro. También son rápidos nadadores, que se impulsan con
+            una cola plana a altas velocidades por las aguas. Por desgracia, es
+            una especie amenazada por la destrucción de su hábitat y su comercio
+            como mascota exótica.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="col">
-  <div class="card shadow" style="width: 18rem;">
-    <img src="https://via.placeholder.com/286x180" class="card-img-top" alt="Camaleón Pantera">
-    <div class="card-body">
-      <h5 class="card-title">Camaleón Pantera</h5>
-      <p class="card-text">Reptil famoso por cambiar de color y camuflarse.</p>
+  <div class="row">
+    <h1
+      class="text-center"
+      style="font-family: 'Pacifico', system-ui; font-size: px"
+    >
+      Animales Exóticos Terrestres
+    </h1>
+    <div class="col-6">
+      <div class="card shadow" style="width: 18rem">
+        <img src="{{ image_url }}" alt="Descripción de la imagen" />
+        <div class="card-body">
+          <h5 class="card-title">loris perezoso (Nycticebus)</h5>
+          <p class="card-text">
+            es un tipo de primate que habita en Asia y está considerado como uno
+            de los animales más exóticos y lentos del mundo. Su historia
+            evolutiva es misteriosa ya que apenas se han encontrado restos
+            fósiles de sus antepasados. Este animal exótico del mundo no posee
+            apenas protección contra sus depredadores y por ello ha desarrollado
+            una glándula en las axilas que supura veneno. Lame la secreción y al
+            mezclarse con la saliva se vuelve activa, muerden a los depredadores
+            e incluso aplican el veneno en el pelaje de sus crías con tal de
+            protegerlas. Es una especie amenazada de extinción y su principal
+            depredador es el ser humano. Además de la desforestación de su
+            hábitat, el comercio ilegal es el principal problema de este pequeño
+            mamífero. Se han tomado medidas de todo tipo para evitar la venta
+            pero aún estando incluida en el convenio CITES, y presente en la
+            lista roja de la IUCN, tristemente podemos encontrar ofertas de
+            ellos en Internet, callejones y tiendas de Asia.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="card shadow" style="width: 18rem">
+        <img src="{{ image_url }}" alt="Descripción de la imagen" />
+        <div class="card-body">
+          <h5 class="card-title">Aye-aye</h5>
+          <p class="card-text">
+            Los aye-ayes solo se encuentran en la isla de Madagascar. Estos
+            raros animales pueden no parecer primates a simple vista, pero están
+            emparentados con los chimpancés, los simios y los humanos. Los
+            aye-ayes pasan su vida en los árboles de la selva tropical y evitan
+            bajar a la tierra. Son nocturnos y pasan el día acurrucados en un
+            nido esférico de hojas y ramas. Los nidos parecen esferas cerradas
+            con una sola entrada, situados en las horquillas de los árboles
+            grandes. Mientras está en lo alto, el aye-aye golpea los árboles con
+            su largo dedo medio y escucha las larvas de insectos xilófagos que
+            se mueven bajo la corteza. Utiliza el mismo dedo medio para
+            extraerlas. Este dedo también le sirve para extraer la pulpa de
+            cocos y otras frutas que complementan su dieta de insectos.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-```
 
+  <div class="row">
+    <h1
+      class="text-center"
+      style="font-family: 'Pacifico', system-ui; font-size: px"
+    >
+      Animales Exóticos Aéreos
+    </h1>
+    <div class="col-6">
+      <div class="card shadow" style="width: 18rem">
+        <img src="{{ image_url }}" alt="Descripción de la imagen" />
+        <div class="card-body">
+          <h5 class="card-title">Quetzal</h5>
+          <p class="card-text">
+            Esta ave monógama habita los bosques tropicales y subtropicales y se
+            alimenta de aguacatillos, insectos y moluscos, lagartijas y ranas,
+            entre otros, mientras sus depredadores naturales son la tucaneta
+            verde, las ardillas y otros mamíferos nocturnos; los búhos, halcones
+            y aguilillas, pero sobre todo los humanos que lo capturan para
+            venderlo como mascota, sin saber que no sobrevive al cautiverio. Los
+            bosques de niebla, áreas de distribución del quetzal, cada vez están
+            más reducidos. En los mapas aparecen 21 pequeñas inserciones desde
+            el sureste de México hasta Panamá, pasando por Guatemala, Honduras,
+            El Salvador, Nicaragua y Costa Rica, donde los quetzales vuelan no
+            más de 30 kilómetros. Los antiguos mexicanos ornamentaban penachos,
+            estandartes y vestiduras de soberanos y sacerdotes con las plumas
+            del quetzal (del náhuatl, quetzalli: cola de plumas brillantes, y
+            del maya, pluma brillante y preciosa), considerado símbolo de poder
+            y de riqueza, de la fertilidad, de la abundancia y de la vida. La
+            ciencia ha encontrado a los antepasados del quetzal en ecosistemas
+            similares de África, Europa y Asia pues, al igual que otros
+            especímenes de la familia de los Trogonidae, sus patas tienen dos
+            dedos hacia delante y dos hacia atrás.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="card shadow" style="width: 18rem">
+        <img src="{{ image_url }}" alt="Descripción de la imagen" />
+        <div class="card-body">
+          <h5 class="card-title">Pato mandarín (Aix galericulata)</h5>
+          <p class="card-text">
+            el pato mandarín. Procede de China, Japón y Rusia hasta que fue
+            introducido en Europa. El pato mandarín es una raza apreciada por su
+            enorme belleza. El macho posee una variedad de colores increíbles
+            como el verde, fucsia, azul, marrón, crema y naranja. Por su
+            colorido se convierte en uno de los animales más exóticos del mundo.
+            Suele habitar en zonas próximas a lagos, charcas o lagunas. Se
+            consideran portadores de buena fortuna en toda Asia, así como de
+            afecto y amor conyugal. Se llega a ofrecer como regalo principal en
+            bodas muy importantes.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 {% endblock %}
