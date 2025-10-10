@@ -1,9 +1,103 @@
-{% extends "index.html"%}
+{% extends "index.html" %}
+{% block content %}
 
-{%block content %}
 <div class="container">
-    
-</div>
-    
+    <h1 class="text-center mb-4" style="font-family: 'Pacifico', system-ui;">
+        Vehículos Antiguos
+    </h1>
 
-{%endblock%}
+    <p class="text-center mx-auto" style="font-family: 'Indie Flower', system-ui; font-size: 20px; max-width: 800px;">
+        La historia del automóvil comenzó en el siglo XIX con los primeros motores
+        de combustión interna. Ingenieros como Karl Benz, Gottlieb Daimler y Henry
+        Ford revolucionaron el transporte, pasando de carruajes sin caballos a
+        máquinas motorizadas capaces de recorrer grandes distancias. Con el tiempo,
+        los vehículos se convirtieron en un símbolo de progreso, libertad y
+        modernidad, marcando una nueva era en la movilidad humana.
+    </p>
+
+    <div class="row mt-5">
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='img/ford.webp') }}"
+                    alt="Ford Model T">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-family: 'Pacifico', system-ui; font-size: 25px">Ford Model T
+                        (1908)</h5>
+                    <p class="card-text" style="font-family: 'Indie Flower', system-ui; font-size: 18px;">
+                        Considerado el primer automóvil producido en masa, el Ford Model T
+                        revolucionó la industria automotriz gracias a la línea de montaje de
+                        Henry Ford. Era asequible, resistente y cambió para siempre la forma
+                        en que el mundo se movía.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='img/mercedes.jpg') }}"
+                    alt="Mercedes-Benz 300SL">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-family: 'Pacifico', system-ui; font-size: 25px">Mercedes-Benz
+                        300SL (1954)</h5>
+                    <p class="card-text" style="font-family: 'Indie Flower', system-ui; font-size: 18px;">
+                        Famoso por sus puertas de “ala de gaviota”, el 300SL fue uno de los
+                        primeros autos deportivos con inyección directa. Su diseño elegante
+                        y rendimiento lo convirtieron en un ícono de la ingeniería alemana.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='img/chevrolet.jpg') }}"
+                    alt="Chevrolet Bel Air">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-family: 'Pacifico', system-ui; font-size: 25px">Chevrolet Bel Air
+                        (1957)</h5>
+                    <p class="card-text" style="font-family: 'Indie Flower', system-ui; font-size: 18px;">
+                        Este clásico estadounidense simboliza la era dorada del automóvil en
+                        los años 50. Con su diseño de aletas traseras y detalles cromados,
+                        el Bel Air se convirtió en un ícono del estilo y la cultura pop.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-5 mx-auto">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='img/volkswagen.webp') }}" class="card-img-top"
+                    alt="Volkswagen Beetle">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-family: 'Pacifico', system-ui; font-size: 25px">Volkswagen Beetle
+                        (1938)</h5>
+                    <p class="card-text" style="font-family: 'Indie Flower', system-ui; font-size: 18px;">
+                        Diseñado por Ferdinand Porsche, el famoso “Escarabajo” fue pensado
+                        como el “auto del pueblo”. Su durabilidad, sencillez y encanto lo
+                        convirtieron en uno de los autos más populares de todos los tiempos.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-5 mx-auto">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='img/roll.jpeg') }}" class="card-img-top"
+                    alt="Rolls-Royce Silver Ghost">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-family: 'Pacifico', system-ui; font-size: 25px">Rolls-Royce
+                        Silver Ghost (1907)</h5>
+                    <p class="card-text" style="font-family: 'Indie Flower', system-ui; font-size: 18px;">
+                        Conocido como “el mejor automóvil del mundo”, el Silver Ghost
+                        estableció la reputación de Rolls-Royce por su lujo y confiabilidad.
+                        Su motor de seis cilindros era una maravilla técnica para su época.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
