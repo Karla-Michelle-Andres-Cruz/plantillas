@@ -1,7 +1,123 @@
-{% extends "index.html"%}
+{% extends "index.html" %}
+{% block content %}
 
-{%block content %}
-<div class="container">
+<div class="container mt-5">
+    <h1 class="text-center mb-4" style="font-family: 'Pacifico', system-ui;">
+        Las 7 Maravillas del Mundo
+    </h1>
 
+    <p class="text-center mx-auto" style="font-family: 'Indie Flower', system-ui; font-size: 18px; max-width: 900px;">
+        Las siete maravillas del mundo moderno fueron elegidas en 2007 por la fundación New7Wonders,
+        como un homenaje a las grandes obras arquitectónicas y culturales que han dejado huella en la humanidad.
+        A continuación, conoce un poco más sobre cada una de estas impresionantes construcciones.
+    </p>
+
+    <div class="row mt-5 g-4">
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='img/murralla.jpg') }}" alt="Gran Muralla China">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-family: 'Pacifico', system-ui; font-size: 25px">Gran Muralla
+                        China (China)</h5>
+                    <p class="card-text" style="font-family: 'Indie Flower', system-ui; font-size: 18px;">
+                        China no deja de sorprender a Occidente con sus últimos proyectos de ingeniería, puentes de cristal de vidrio, sus patrimonios de la humanidad, fantasiosas bibliotecas, teatros y rascacielos… Grandes infraestructuras con las que exportar su estatus de nueva potencia económica. Pero en un pasado, la mayor de las construcciones chinas se levantó como barrera y frontera inexpugnable, para cerrar la frontera norte del Imperio chino a las invasiones que venían desde  Mongolia y Manchuria.
+                        Con más de 2.000 años de historia, la Gran Muralla China ha estado ligada a las dinastías más importantes de China, como la Dinastía Qin y la Ming. Más de 21.000 kilómetros entre paisajes fabulosos que cruzan selvas y desiertos y el mito de que es una de las únicas construcciones humanas que se pueden ver desde el cielo llevaron a que fuera escogida como una de las nuevas maravillas del mundo moderno.
+                    </p>
+                    <a href="https://youtu.be/yFTDHgZbd4Q?si=HQkZuEFxn8dVI9r8" class="btn btn-primary">Saber más</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='img/petra.jpg') }}" alt="Petra">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-family: 'Pacifico', system-ui; font-size: 25px">Petra (Jordania)
+                    </h5>
+                    <p class="card-text" style="font-family: 'Indie Flower', system-ui; font-size: 18px;">
+                    Petra pasó a formar parte de la lista de las nuevas siete maravillas del mundo por votación popular. Y eso que el 80% todavía está oculto; pero lo cierto es que Petra, o Raqmu, como la llamaban sus segundos pobladores, los nabateos, es un enclave fascinante. Se haya tenido la oportunidad de visitar o ya solo sea por haber visto Indiana Jones y la última cruzada, todo el mundo sabe que tras superar el estrecho desfiladero lo que aparece al fondo es el Al-Khazneh, el Tesoro del Faraón.
+                    </p>
+                    <a href="https://youtu.be/MFwYotIcRqM?si=Cn_6EN7buycuPo-Q" class="btn btn-primary">Saber más</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='img/cristo.jpg') }}" alt="Cristo Redentor">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-family: 'Pacifico', system-ui; font-size: 25px">Cristo Redentor
+                        (Brasil)</h5>
+                    <p class="card-text" style="font-family: 'Indie Flower', system-ui; font-size: 18px;">
+                        Justo hace diez años que los cariocas pudieron festejar por todo lo alto el haberse convertido en la primera ciudad del mundo en ser declarada como Patrimonio de la Humanidad. Tanto su patrimonio cultural como el natural, con una geografía urbana que engloba mar, montaña y selva. fuero clave en la decisión.
+                        A Río de Janeiro no le faltan iconos; pero solo uno de ellos está considerado como una de las nuevas siete maravillas del mundo: el Cristo de Corcovado, la escultura art decó más grande del mundo. Hasta la cima donde se sitúa se puede llegar en coche, pero es mejor hacerlo en el Tren de Corcovado que atraviesa el frondoso Parque Nacional Tijuca.
+                    </p>
+                    <a href="https://youtu.be/bdMoU-rx10I?si=w71XAdORpN0VByTQ" class="btn btn-primary">Saber más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5 g-4">
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='img/machu.webp') }}" alt="Machu Picchu">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-family: 'Pacifico', system-ui; font-size: 25px">Machu Picchu
+                        (Perú)</h5>
+                    <p class="card-text" style="font-family: 'Indie Flower', system-ui; font-size: 18px;">
+                        Tras su visita a Machu Picchu en octubre de 1943, Pablo Neruda vio en la ciudad abandonada entre la espesa y húmeda selva un símbolo de la opresión de los pueblos indígenas: "Entonces en la escala de la tierra he subido/entre la atroz maraña de las selvas perdidas/hasta ti, Machu Picchu", escribió en Alturas de Machu Picchu. Aún se le puede escuchar recitar sus emocionantes versos gracias a un audio grabado en Santiago de Chile el 10 de marzo de 1947. Lo cierto es que desde que el explorador Hiram Bingham volvió a colocarla en el mapa en 1911, la ciudadela no ha dejado de fascinar a todo aquel que, dejando atrás Aguas Calientes, ha ascendido hasta la cumbre donde los incas lograron convertir una agresiva orografía en una ciudadela inmortal. 
+                    </p>
+                    <a href="https://youtu.be/DBKwTumVFdg?si=rLgzJK4jauyLoFWw" class="btn btn-primary">Saber más</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='img/chichen.jpg') }}" alt="Chichén Itzá">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-family: 'Pacifico', system-ui; font-size: 25px">Chichén Itzá
+                        (México)</h5>
+                    <p class="card-text" style="font-family: 'Indie Flower', system-ui; font-size: 18px;">
+                        El yacimiento arqueológico de Chichén Itzá se abre en medio de la inmensa selva de la península de Yucatán y cubre un área de 6.5 km2. Basta ver, nada más acceder, al recinto la espectacular pirámide de Kukulcán para comprender que este fuera uno de los lugares elegidos para incorporarse en la lista de las nuevas siete maravillas del mundo. La geometría de la pirámide guarda el secreto del dominio que tenían sobre la astronomía los mayas.
+                        Algo que se puede comprobar con el descenso de la serpiente durante el equinoccio de otoño y de primavera. La cancha del juego de la pelota, la mayor de México, con bajorrelieves donde se representan las decapitaciones de jugadores, los baños de vapor o el observatorio astronómico, con puertas y ventanas alineadas con los astros celestes en determinadas fecha, resultan igualmente espectaculares. 
+                    </p>
+                    <a href="https://youtu.be/1gQV2H8ERA8?si=j48MoLVLMf64-f3g" class="btn btn-primary">Saber más</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='img/coliseo.jpg') }}" alt="Coliseo Romano">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-family: 'Pacifico', system-ui; font-size: 25px">Coliseo Romano
+                        (Italia)</h5>
+                    <p class="card-text" style="font-family: 'Indie Flower', system-ui; font-size: 18px;">
+                        La inauguración con el sacrificio de más de 5.000 fieras del Coliseo en el año 80 supuso uno de los mayores acontecimientos sociales del Imperio Romano. Desde entonces, el anfiteatro empezado por el emperador Vespasiano en el 72 d. C. no ha dejado generar fascinación. Este monumento concentra como pocos historia y arquitectura. En él estaba todo perfectamente estudiado para acoger a los hasta 50.000 espectadores ordenados por su rango social que se concentraban para ver peleas de gladiadores, ejecuciones, recreaciones de batallas o caza de animales. 
+                    </p>
+                    <a href="https://youtu.be/VYz8Q6ANNhg?si=oFQrXD7oUEgLbJPp" class="btn btn-primary">Saber más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5 g-4">
+        <div class="col-md-6 col-lg-4 mx-auto">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='img/taj.webp') }}" alt="Taj Mahal">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-family: 'Pacifico', system-ui; font-size: 25px">Taj Mahal (India)
+                    </h5>
+                    <p class="card-text" style="font-family: 'Indie Flower', system-ui; font-size: 18px;">
+                        El emperador Sha Jahan ordenó levantarlo con el deseo de plasmar materialmente su reinado, tal como había hecho antes con los jardines Shalimar de Lahore, el Fuerte Rojo o la Jama Masjid de Delhi. Todo ello formaba parte de su legado; pero con el paso del tiempo ha trascendido la versión más poética de la construcción del famoso mausoleo de Agra, la de que el emperador ordenó construirlo en memoria de su cuarta esposa, la favorita. Sea como sea, la belleza simétrica y blanca del Taj Mahal es de esas que despiertan intensas sensaciones. "Una lágrima en la mejilla del tiempo", como dijo el poeta Rabindranath Tagore.
+                    </p>
+                    <a href="https://youtu.be/Ipzpz5xssLo?si=xuJbuga7HHQfFDDW" class="btn btn-primary">Saber más</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-{%endblock%}
+
+{% endblock %}

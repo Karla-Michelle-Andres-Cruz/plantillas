@@ -1,0 +1,14 @@
+.card {
+    max-height: 600px; /* limita la altura total */
+    overflow: hidden; /* oculta el exceso de texto o imagen */
+}
+
+.card img {
+    height: 300px; /* controla el tamaño de la imagen */
+    object-fit: cover; /* evita que se deforme */
+}
+
+.card-text {
+    max-height: 150px; /* limita la altura del texto */
+    overflow-y: auto; /* agrega scroll si es necesario */
+}
