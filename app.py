@@ -26,6 +26,14 @@ def Mara():
 def acerca():
     return render_template("acerca.html")
 
+@app.route("/registro")
+def registro():
+    return render_template("registro.html")
+
+@app.route("/inicioSesión")
+def sesión():
+    return render_template("inicioSe.html")
+
 
 
 if __name__ == "__main__":
