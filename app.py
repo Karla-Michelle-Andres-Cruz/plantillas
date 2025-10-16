@@ -1,6 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for, flash
 
 app = Flask (__name__)
+
+app.config['SECRET_KEY']='una_clave_secreta_muy_larga_y_dificil_de_adivinar'
 
 @app.route("/")
 def index():
@@ -34,7 +36,28 @@ def registro():
 def sesión():
     return render_template("inicioSe.html")
 
-
+@app.route("/registrame", methods=("GET", "POST"))
+def registrame():
+    error = None
+    if request.method == "POST":
+        nombre= request.form["nombre"]
+        Apellido = request.form["apellido"]
+        genero = request.form["genero"]
+        email = request.form["email"]
+        contraseña = request.form["contraseña"]
+        confContraseña = request.form["confirmaContraseña"]
+        
+        if contraseña != confContraseña:
+            error= "La contraseña no coincide"
+            
+        if error != None:
+            flash(error)
+            return render_template("registro.html")
+        else:
+            flash(f"¡Registro exitoso para el usuario: {nombre, Apellido}")
+            return render_template ("index.html")
+        
+    return
 
 
 
