@@ -48,14 +48,14 @@ def registrame():
         confContraseña = request.form["confirmaContraseña"]
         
         if contraseña != confContraseña:
-            error= "La contraseña no coincide"
+            error= "La Contraseña no Coincide"
             
         if error != None:
             flash(error)
             return render_template("registro.html")
         else:
             flash(f"¡Registro exitoso para el usuario: {nombre, Apellido}")
-            return render_template ("index.html")
+            return render_template ("inicio.html")
         
     return
 
