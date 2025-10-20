@@ -80,7 +80,8 @@
                         <label for="gender" class="form-label"
                             style="font-family: 'Pacifico', system-ui; font-size: 18px;">Género</label>
                         <div class="d-flex justify-content-between mb-3">
-                            <select class = "form-select rounded-pill" id="genero" name="genero" required>
+                            <select class = "form-select rounded-pill" id="genero" name="genero" required
+                            style="font-family: 'Caveat', system-ui; font-size: 20px">
                                 <option value="" disable selected>Selecciona una opción</option>
                                 <option value="masculino" {% if request.form.get("genero") == "masculino" %} selected {% endif %}>Hombre</option>
                                 <option value="femenino" {% if request.form.get("genero") == "femenino" %} selected {% endif %}>Mujer</option>
