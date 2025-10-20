@@ -1,6 +1,15 @@
-{% extends "index.html" %} {% block content %}
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Mejor Pagina Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+</head>
 <body class="p-3 mb-2 text-secondary-emphasis" style="background-color: #F8E8EE;">
     <div class="container">
         <div class="row justify-content-center">
@@ -97,6 +106,22 @@
                                 <option value="">Año</option>
                                 <option value="2025">2025</option>
                                 <option value="2024">2024</option>
+                                <option value="2024">2023</option>
+                                <option value="2024">2022</option>
+                                <option value="2024">2021</option>
+                                <option value="2024">2020</option>
+                                <option value="2024">2019</option>
+                                <option value="2024">2018</option>
+                                <option value="2024">2017</option>
+                                <option value="2024">2016</option>
+                                <option value="2024">2015</option>
+                                <option value="2024">2014</option>
+                                <option value="2024">2013</option>
+                                <option value="2024">2012</option>
+                                <option value="2024">2011</option>
+                                <option value="2024">2010</option>
+                                <option value="2024">2009</option>
+                                <option value="2024">2008</option>
                             </select>
                         </div>
                     </div>
@@ -107,17 +132,20 @@
                         <div class="d-flex justify-content-between mb-3">
                             <select class = "form-select rounded-pill" id="genero" name="genero" required>
                                 <option value="" disable selected>Selecciona una opción</option>
-                                <option value="" disable >Mujer</option>
-                                <option value="" disable >Hombre</option>
-                                <option value="" disable >Prefiero no decirlo</option>
+                                <option value="masculino" {% if request.form.get("genero") == "masculino" %} selected {% endif %}>Hombre</option>
+                                <option value="femenino" {% if request.form.get("genero") == "femenino" %} selected {% endif %}>Mujer</option>
+                                <option value="otro" {% if request.form.get("genero") == "otro" %} select {% endif%}>Otro</option>
+                                <option value="prefinodecir" {% if request.form.get("genero") == "prefinodecir" %} select {% endif%}>Prefiero no decirlo</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="mb-3">
                         <input type="email" class="form-control" id="email" name="email"
-                            placeholder="Número de celular o correo electrónico"
-                            style="font-family: 'Caveat', system-ui; font-size: 20px" required>
+                            placeholder="Correo electrónico"
+                            style="font-family: 'Caveat', system-ui; font-size: 20px" required
+                            pattern= "[a-z0-9._%+-]+@[a^z0-9.-]+\,[a-z]{2,}$"
+                            value= "{{request.form.get("email",'')}}">
                     </div>
                     <div class="mb-3">
                         <input type="password" class="form-control" id="password" name="contraseña" placeholder="Contraseña nueva"
@@ -125,10 +153,10 @@
                     </div>
                     <div class="mb-3">
                         <input type="password" class="form-control" id="confirPassword" name="confirmaContraseña" placeholder="Confirma tu contraseña"
-                            style="font-family: 'Caveat', system-ui; font-size: 20px" required required minlength="8" maxlength="25">
+                            style="font-family: 'Caveat', system-ui; font-size: 20px" required minlength="8" maxlength="25">
                     </div>
                     <button type="submit" class="btn btn-light w-100"
-                        style="font-family: 'Pacifico', system-ui; font-size: 18px">Inicia Sesión</button>
+                        style="font-family: 'Pacifico', system-ui; font-size: 18px">Registrame</button>
                     <hr>
                     <p class="text-center">
                         <a href="http://127.0.0.1:5000/inicioSesión" class="text-black text-decoration-none"
@@ -138,5 +166,6 @@
             </div>
         </div>
     </div>
-
-    {% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

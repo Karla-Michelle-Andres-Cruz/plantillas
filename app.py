@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 
 app = Flask (__name__)
 
-app.config['SECRET_KEY']='una_clave_secreta_muy_larga_y_dificil_de_adivinar'
+app.config['SECRET_KEY']='TIAMIOSSOTT12'
 
 @app.route("/")
 def index():
@@ -54,7 +54,7 @@ def registrame():
             flash(error)
             return render_template("registro.html")
         else:
-            flash(f"¡Registro exitoso para el usuario: {nombre, Apellido}")
+            flash(f"¡Registro exitoso para el usuario: {nombre} {Apellido}")
             return render_template ("inicio.html")
         
     return
