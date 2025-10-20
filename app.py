@@ -36,28 +36,32 @@ def registro():
 def sesión():
     return render_template("inicioSe.html")
 
-@app.route("/registrame", methods=("GET", "POST"))
+@app.route("/registrame", methods=["GET", "POST"])
 def registrame():
-    error = None
     if request.method == "POST":
-        nombre= request.form["nombre"]
-        Apellido = request.form["apellido"]
+        nombre = request.form["nombre"]
+        apellido = request.form["apellido"]
         genero = request.form["genero"]
         email = request.form["email"]
         contraseña = request.form["contraseña"]
-        confContraseña = request.form["confirmaContraseña"]
-        
-        if contraseña != confContraseña:
-            error= "La Contraseña no Coincide"
-            
-        if error != None:
-            flash(error)
+        conf_contraseña = request.form["confirmaContraseña"]
+
+        emails_registrados = ["test@example.com", "juan@correo.com"]
+
+        if email in emails_registrados:
+            flash("Este correo ya está registrado", "error")
             return render_template("registro.html")
-        else:
-            flash(f"¡Registro exitoso para el usuario: {nombre} {Apellido}")
-            return render_template ("inicio.html")
         
-    return
+        if contraseña != conf_contraseña:
+            flash("La contraseña no coincide", "error")
+            return render_template("registro.html")
+
+        flash(f"¡Registro exitoso para el usuario: {nombre} {apellido}", "success")
+        return render_template("inicio.html")
+
+    return render_template("registro.html")
+
+
 
 
 
