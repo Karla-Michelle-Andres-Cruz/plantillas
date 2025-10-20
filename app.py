@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
-
+from datetime import datetime
 app = Flask (__name__)
 
 app.config['SECRET_KEY']='TIAMIOSSOTT12'
@@ -30,7 +30,11 @@ def acerca():
 
 @app.route("/registro")
 def registro():
-    return render_template("registro.html")
+    dias = list(range(1, 32))
+    meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio","Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+    año_actual = datetime.now().year
+    años = list(range(año_actual, 1905, -1))
+    return render_template("registro.html", dias=dias, meses=meses, años=años)
 
 @app.route("/inicioSesión")
 def sesión():
@@ -38,6 +42,7 @@ def sesión():
 
 @app.route("/registrame", methods=["GET", "POST"])
 def registrame():
+    error = None
     if request.method == "POST":
         nombre = request.form["nombre"]
         apellido = request.form["apellido"]
@@ -46,18 +51,13 @@ def registrame():
         contraseña = request.form["contraseña"]
         conf_contraseña = request.form["confirmaContraseña"]
 
-        emails_registrados = ["test@example.com", "juan@correo.com"]
 
-        if email in emails_registrados:
-            flash("Este correo ya está registrado", "error")
-            return render_template("registro.html")
-        
+
         if contraseña != conf_contraseña:
             flash("La contraseña no coincide", "error")
             return render_template("registro.html")
-
-        flash(f"¡Registro exitoso para el usuario: {nombre} {apellido}", "success")
-        return render_template("inicio.html")
+        
+        if error != None: flash(error) return render_template("registro.html") else: flash(f"¡Registro exitoso para el usuario: {nombre, Apellido}") return render_template ("inicio.html")
 
     return render_template("registro.html")
 
