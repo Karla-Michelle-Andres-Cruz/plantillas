@@ -57,8 +57,7 @@ def registrame():
             flash("La contraseña no coincide", "error")
             return render_template("registro.html")
         
-        if error != None: 
-            flash(error) 
+        if error != None: flash(error) 
         return render_template("registro.html") 
     else: 
         flash(f"¡Registro exitoso para el usuario: {nombre, apellido}") 
