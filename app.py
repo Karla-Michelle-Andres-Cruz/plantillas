@@ -14,10 +14,6 @@ usuariosRegist = {
 
 @app.route("/")
 def index():
-    return render_template("index.html")
-
-@app.route("/inicio")
-def inicio():
     return render_template("inicio.html")
 
 @app.route("/animales")
@@ -44,10 +40,10 @@ def registro():
     años = list(range(año_actual, 1905, -1))
     return render_template("registro.html", dias=dias, meses=meses, años=años)
 
-@app.route("/inicio_sesion")
+@app.route("/iniciosesion")
 def sesion():
     if session.get('logueado'):
-        return redirect(url_for("inicio"))
+        return redirect(url_for("index"))
     return render_template("inicioSe.html")
 
 @app.route("/validalogin", methods=['POST'])
@@ -67,7 +63,7 @@ def validaLogin():
                 session['usuario'] = usuario['nombre']
                 session['logueado'] = True
                 flash(f"Bienvenido {usuario['nombre']}", "success")
-                return redirect(url_for('inicio'))
+                return redirect(url_for("index"))
             else:
                 flash('Contraseña incorrecta', 'error')
         else:
