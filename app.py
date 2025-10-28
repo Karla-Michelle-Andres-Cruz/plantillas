@@ -96,7 +96,7 @@ def registrame():
         if error != None: flash(error) 
         return render_template("registro.html") 
     else: 
-        flash(f"¡Registro exitoso para el usuario: {nombre, apellido}") 
+        flash(f"¡Registro exitoso para el usuario: {nombre}, {apellido}") 
         return render_template ("inicio.html") 
     
 
