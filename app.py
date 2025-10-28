@@ -7,7 +7,7 @@ app.config['SECRET_KEY']='TIAMIOSSOTT12'
 usuariosRegist = {
     'admin@correo.com':{
         'contraseña': 'Admin123',
-        'nombre': 'Administrador',
+        'nombre': 'Karla',
         'fecha_nacimiento': '1990-01-01'
     }
 }
@@ -40,6 +40,7 @@ def registro():
     años = list(range(año_actual, 1905, -1))
     return render_template("registro.html", dias=dias, meses=meses, años=años)
 
+
 @app.route("/iniciosesion")
 def sesion():
     if session.get('logueado'):
@@ -70,6 +71,13 @@ def validaLogin():
             flash('Usuario no encontrado', 'error')
         
         return redirect(url_for('sesion'))
+
+@app.route("/cerrarsesion")
+def cerrarsesion():
+    session.clear()
+    flash("Has cerrado sesión exitosamente", "success")
+    return redirect(url_for("index"))
+
 
 
 @app.route("/registrame", methods=["GET", "POST"])

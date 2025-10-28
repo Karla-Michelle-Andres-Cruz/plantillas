@@ -37,12 +37,9 @@
                 <li class="nav-item">
                     <a class="nav-link" style="font-family: 'Lobster', system-ui;" href="/acercade">Acerca de...</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" style="font-family: 'Lobster', system-ui;" href="/registro">Registro de usuario</a>
-                </li>
-                {% if 'usuariosRegist' in session %}
+                {% if session.get('usuario') %}
                         <li class="nav-item">
-                            <span class="nav-link disabled" style="font-weight: bold;"> {{ session['usuario'] }}</span>
+                            <span class="nav-link disabled" style="font-family: 'Lobster', system-ui; bold;">Bienvenid@:{{ session['usuario'] }}</span>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="font-family: 'Lobster', system-ui;" href="{{ url_for('cerrarsesion') }}">Cerrar sesión</a>
@@ -50,6 +47,9 @@
                     {% else %}
                         <li class="nav-item">
                             <a class="nav-link" style="font-family: 'Lobster', system-ui;" href="{{ url_for('sesion') }}">Iniciar sesión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-family: 'Lobster', system-ui;" href="{{ url_for('registro') }}">Registro de usuario</a>
                         </li>
                     {% endif %}
             </ul>
